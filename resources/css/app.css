@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-sanpedro-50: #eef4ff;
+    --color-sanpedro-100: #d9e6ff;
+    --color-sanpedro-200: #b3ccff;
+    --color-sanpedro-300: #80adff;
+    --color-sanpedro-400: #4d8dff;
+    --color-sanpedro-500: #1f5fdb;
+    --color-sanpedro-600: #154ab3;
+    --color-sanpedro-700: #0f3a8f;
+    --color-sanpedro-800: #0c2e70;
+    --color-sanpedro-900: #0a2559;
+
+    --color-sanpedro_gold-400: #f2c14e;
+    --color-sanpedro_gold-500: #e0a72b;
+    --color-sanpedro_gold-600: #b9860f;
+}
+
+@layer base {
+    body {
+        @apply antialiased text-gray-800 bg-gray-50;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg bg-sanpedro-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sanpedro-700;
+    }
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg border border-sanpedro-600 px-5 py-2.5 text-sm font-semibold text-sanpedro-700 transition hover:bg-sanpedro-50;
+    }
+    .card {
+        @apply rounded-xl border border-gray-100 bg-white shadow-sm;
+    }
+    .input {
+        @apply w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-sanpedro-500 focus:ring-2 focus:ring-sanpedro-100 focus:outline-none;
+    }
+    .label {
+        @apply mb-1 block text-sm font-medium text-gray-700;
+    }
+    .badge {
+        @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium;
+    }
+}
